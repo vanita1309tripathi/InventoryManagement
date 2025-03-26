@@ -1,0 +1,16 @@
+body{
+   
+}
+.container{
+    margin:20px;
+    width:90vw;
+   
+}
+table{
+    width:90vw;
+}
+.product-image{
+    max-width: 200px;
+    max-height: 300px;
+    object-fit: contain;
+}

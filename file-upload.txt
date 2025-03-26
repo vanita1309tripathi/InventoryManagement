@@ -1,0 +1,4 @@
+1. Install multer //Can see the README in github
+2. Update view to handle files and how we submit our form
+3. Middleware to handle files
+4. Update the controller

@@ -1,0 +1,33 @@
+<h1>Add New Product</h1>
+<% if (errors.length > 0) { %>
+  <% errors.forEach((error) => { %>
+      <!-- <%= error %><br> This is for first bslidation method-->
+      <%= error.msg %><br>
+  <% }); %>
+<% } %>
+
+
+<form action="/" method="post" enctype="multipart/form-data"> 
+    <div class="mb-3">
+      <label for="name" class="form-label">Product Name</label>
+      <input type="text" class="form-control" id="name" name="name">
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Product Description</label>
+      <input type="text" class="form-control" id="description" name="description">
+    </div>
+    <div class="mb-3 ">
+        <label class="form-label" for="price">Price</label>
+      <input type="text" class="form-control" id="price" name="price">
+      
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="imgURL">Image</label>
+        <!-- If we want to upload image file -->
+        <input type="file" class="form-control" id="imgURL" name="imgURL" accept="images/*">
+        <!-- If we want to input image as a URL: -->
+      <!-- <input type="url" class="form-control" id="imgURL" name="imgURL"> -->
+      
+    </div>
+    <button type="submit" class="btn btn-primary">Add product</button>
+  </form>

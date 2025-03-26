@@ -1,0 +1,34 @@
+<h1>UpdateProduct</h1>
+<div class="alert"><% if (errors.length > 0) { %>
+  <% errors.forEach((error) => { %>
+      <!-- <%= error %><br> This is for first validation method-->
+      <%= error.msg %><br>
+  <% }); %>
+<% } %>
+</div>
+
+
+<form action="/update/<%= product.id %>" method="post"> 
+    <div class="mb-3">
+        <input type="hidden" class="form-control" id="id" name="id" value="<%= product.id %>">
+      </div>
+    <div class="mb-3">
+      <label for="name" class="form-label">Product Name</label>
+      <input type="text" class="form-control" id="name" name="name" value="<%= product.name %>">
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Product Description</label>
+      <input type="text" class="form-control" id="description" name="description" value="<%= product.desc %>">
+    </div>
+    <div class="mb-3 ">
+        <label class="form-label" for="price">Price</label>
+      <input type="text" class="form-control" id="price" name="price" value="<%= product.price %>">
+      
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="imgURL">Image</label>
+      <input type="url" class="form-control" id="imgURL" name="imgURL" value="<%= product.imageURL %>">
+      
+    </div>
+    <button type="submit" class="btn btn-primary">Update product</button>
+  </form>
