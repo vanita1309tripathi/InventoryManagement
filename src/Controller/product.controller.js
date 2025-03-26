@@ -51,7 +51,8 @@ export default class ProductController{
     ProductModel.update(id, req.body);
     let products = ProductModel.get();
 
-    res.render("products", { products: products });
+    // res.render("products", { products: products }); This was rendering the product page with added /update/:id in the URL so we can't do Delete function 
+    res.redirect('/');
     }
     
     deleteProduct(req,res,next){
